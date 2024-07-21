@@ -1,3 +1,12 @@
 version = 1
 
-test_patterns = ["test/**"]
+test_patterns = [
+    "tests/**",
+    "test_*.py"
+]
+
+[[analyzers]]
+name = "python"
+
+[analyzers.meta]
+runtime_version = "3.x.x"
