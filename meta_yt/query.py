@@ -21,10 +21,10 @@ class Query:
         :param max_results: The maximum number of results to retrieve. Defaults to None.
         :type max_results: int, optional
         """
-        self.query = query 
-        self.max_results = max_results 
-        self.__results = [] 
-        self.__search__() 
+        self.query = query
+        self.max_results = max_results
+        self.__results = []
+        self.__search__()
 
     def __parse__(self, response: str):
         """
@@ -45,9 +45,12 @@ class Query:
                 for video in contents["itemSectionRenderer"]["contents"]:
                     if "videoRenderer" in video.keys():
                         try:
-                            result = {"title": video["videoRenderer"]["title"]["runs"][
-                                0
-                            ]["text"], "videoId": video["videoRenderer"]["videoId"]}
+                            result = {
+                                "title": video["videoRenderer"]["title"]["runs"][0][
+                                    "text"
+                                ],
+                                "videoId": video["videoRenderer"]["videoId"],
+                            }
                             self.__results.append(result)
                         except Exception:
                             continue
