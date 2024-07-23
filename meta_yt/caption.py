@@ -48,7 +48,6 @@ class Caption:
         :return: The transcript in SubRip (SRT) format.
         :rtype: str
         """
-        self.__transcript
         return
 
     @property
