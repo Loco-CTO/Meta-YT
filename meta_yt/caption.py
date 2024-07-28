@@ -49,7 +49,7 @@ class Caption:
         :return: The transcript in SubRip (SRT) format.
         :rtype: str
         """
-        return
+        raise NotImplementedError()
 
     @property
     def transcript(self) -> list:
