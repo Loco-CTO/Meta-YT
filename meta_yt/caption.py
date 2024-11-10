@@ -1,9 +1,11 @@
 """This module contains the developer interface for captions fetching."""
 
+from html import unescape
+
 import requests
 import xmltodict
+
 from .langauge import get_language
-from html import unescape
 from .srt import convert_to_srt
 
 
